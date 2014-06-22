@@ -15,12 +15,12 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve inverses matrix, returns cache'd matrix if it hasn't changed
+## cacheSolve inverses matrix, returns cached matrix if it hasn't changed
 
 cacheSolve <- function(x = matrix(), ...) {
     z<-x$getmatrix()
     if(!is.null(z)){
-        message("getting cached data")
+        print("Using cached matrix.")
         return(z)
     }
     matrix<-x$get()
